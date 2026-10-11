@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>First Fruits case study — Olivia Yun</title>
+    <meta
+      name="description"
+      content="How I designed and built the Catalyst experience for First Fruits at HACKVAN2026: triage-first home, privacy by assignment, and check-in review."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">Olivia <span>Yun</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html#work" aria-current="page">Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero case-hero">
+        <div class="wrap">
+          <p class="eyebrow">Case study · HACKVAN2026</p>
+          <h1>First Fruits: helping coaches see <em>where they're needed</em></h1>
+          <p class="lead">
+            In 48 hours, our team built a web app for SEND Network that lets church planters track their own plan, and
+            lets their coach, the Catalyst, step in at the right moment. I owned the Catalyst side, from layout to
+            database access rules.
+          </p>
+          <dl class="meta-grid">
+            <div><dt>Role</dt><dd>Catalyst journey owner</dd></div>
+            <div><dt>Team</dt><dd>4 people · design, front-end, back-end</dd></div>
+            <div><dt>Timeline</dt><dd>Oct 2–4, 2026 · 48 hours</dd></div>
+            <div><dt>Stack</dt><dd>Next.js, TypeScript, Tailwind, Supabase</dd></div>
+          </dl>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/FaithTechGlobalLabs/PlanterFlow-Team-1" target="_blank" rel="noopener">View repository ↗</a>
+            <a class="btn btn-ghost" href="https://github.com/FaithTechGlobalLabs/PlanterFlow-Team-1/pull/59" target="_blank" rel="noopener">My main PR (#59) ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section>
+        <div class="wrap two-col">
+          <div class="prose">
+            <p class="eyebrow">The problem</p>
+            <h2>Coaching that lived in phone calls</h2>
+            <p>
+              A Catalyst coaches several church planters. Each planter's plan lived in verbal check-ins, so there was no
+              shared record and no early signal when someone was struggling.
+            </p>
+            <p>
+              The client asked one question of the Catalyst home: <strong>"Where am I needed?"</strong> Not a
+              dashboard of every number, but a short list of people to reach out to today.
+            </p>
+          </div>
+          <div class="prose">
+            <p class="eyebrow">What I built</p>
+            <h2>The Catalyst journey</h2>
+            <ul>
+              <li><strong>Garden home</strong>: greeting, a one-line summary, and "Where your presence helps" ranked by need.</li>
+              <li><strong>Church review</strong>: church, pastor, tree stage by planting age, check-ins, goals, progress and conversation.</li>
+              <li><strong>Check-in acknowledgement</strong>: the coach answers the latest check-in with a support note.</li>
+              <li><strong>Category management</strong>: add, rename, reorder and safely delete objective categories.</li>
+              <li><strong>Invitation status</strong>: pending, accepted and expired pastor invites.</li>
+              <li><strong>Feature documentation</strong> for the team.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section>
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Design decisions</p>
+            <h2>Small choices that kept it honest</h2>
+          </div>
+          <div class="grid">
+            <article class="card decision reveal">
+              <h3>Triage first, not every card equal</h3>
+              <p>
+                Churches that need attention move to the top, in a fixed order: support requested, then a check-in to
+                review, then a check-in that is overdue.
+              </p>
+            </article>
+            <article class="card decision reveal">
+              <h3>Status from real activity</h3>
+              <p>
+                "Last activity" comes from progress entries and check-ins, not from someone editing a goal. A quiet
+                church reads "may be time to reach out — not a health score."
+              </p>
+            </article>
+            <article class="card decision reveal">
+              <h3>A review must be a real review</h3>
+              <p>
+                A general reply under a goal doesn't clear a check-in. Only an acknowledgement linked to that exact
+                check-in does, so no planter falls off the list by accident.
+              </p>
+            </article>
+            <article class="card decision reveal">
+              <h3>No false all-clear</h3>
+              <p>
+                If churches fail to load, the page shows an error and hides the counts. It never says "everyone is up
+                to date" when it simply couldn't check.
+              </p>
+            </article>
+            <article class="card decision reveal">
+              <h3>Privacy by assignment</h3>
+              <p>
+                A Catalyst sees only churches assigned to them. Another coach's church, or another organization's,
+                returns "not found", enforced on the server, not just hidden in the UI.
+              </p>
+            </article>
+            <article class="card decision reveal">
+              <h3>Protect people's history</h3>
+              <p>
+                A category with goals can be renamed but not deleted, and the prayer category can't be deleted, so no
+                planter loses their record.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section>
+        <div class="wrap two-col">
+          <div class="prose">
+            <p class="eyebrow">How it came together</p>
+            <h2>Working in a fast-moving team</h2>
+            <p>
+              I also coordinated the team's merge order. When two pull requests built the same invitation page, I
+              found the conflict, wrote it up, and helped the team settle on one flow.
+            </p>
+            <div class="callout">
+              <strong>Code review loop.</strong> My main PR went through two rounds of review. The reviewer asked for
+              assigned-church scoping, real status data, and separating check-in reviews from ordinary replies. I made
+              each change, added tests, and rebased onto the new baseline three times without breaking teammates' work.
+            </div>
+            <p>
+              The access rule I wrote, "a Catalyst only sees assigned churches", became the model the team used for the
+              shared prayer and support conversations.
+            </p>
+          </div>
+          <div>
+            <ol class="timeline" aria-label="Timeline">
+              <li><strong>Day 1 · morning</strong><span>Read the spec, mapped Figma frames to routes, built the first Catalyst screens.</span></li>
+              <li><strong>Day 1 · afternoon</strong><span>Connected to the real database, tested the full invite flow end to end.</span></li>
+              <li><strong>Day 1 · evening</strong><span>Two review rounds: assignment scoping, real statuses, linked acknowledgements.</span></li>
+              <li><strong>Day 1 · night</strong><span>Rebased on the new baseline, PR #59 merged and deployed.</span></li>
+              <li><strong>Follow-up</strong><span>Invitation status and feature docs, PR #66 merged.</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section>
+        <div class="wrap two-col">
+          <div class="prose">
+            <p class="eyebrow">Under the hood</p>
+            <h2>Built to be trusted</h2>
+            <ul>
+              <li>Next.js App Router with server components and server actions</li>
+              <li>Supabase Postgres with row-level security; the author and organization always come from the session, never the form</li>
+              <li>A SQL migration linking acknowledgements to check-ins</li>
+              <li>Unit and component tests for every status rule, permission check and form state (Vitest, Testing Library)</li>
+              <li>Accessible forms: visible labels, focus styles, text badges (not colour alone), errors that keep what you typed</li>
+            </ul>
+          </div>
+          <div class="prose">
+            <p class="eyebrow">What I learned</p>
+            <h2>Design is also what you refuse to show</h2>
+            <p>
+              The most important design work here was deciding what not to say: no health scores, no false all-clear,
+              no data a coach shouldn't see.
+            </p>
+            <p>
+              I also learned to work in public: small pull requests, clear notes to reviewers, and checking teammates'
+              branches before force-pushing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="wrap">
+          <h2>Want to see more?</h2>
+          <div class="actions">
+            <a class="btn btn-primary" href="index.html#work">Back to projects</a>
+            <a class="btn btn-ghost" href="https://github.com/FaithTechGlobalLabs/PlanterFlow-Team-1/pull/66" target="_blank" rel="noopener">PR #66 ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span data-year>2026</span> Olivia (Kyounga) Yun</span>
+        <span><a href="index.html">Home</a></span>
+      </div>
+    </footer>
+  </body>
+</html>

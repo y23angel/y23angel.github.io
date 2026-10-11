@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Olivia Yun — Web designer who codes</title>
+    <meta
+      name="description"
+      content="Olivia (Kyounga) Yun is a web designer who builds what she designs: interfaces, front-end code and the data behind them."
+    />
+    <meta property="og:title" content="Olivia Yun — Web designer who codes" />
+    <meta
+      property="og:description"
+      content="Portfolio: First Fruits (HACKVAN2026), Bookify, ESP-EYE embedded ML, system security labs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">Olivia <span>Yun</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Web designer who codes</p>
+          <h1>I design interfaces, <em>then build them.</em></h1>
+          <p class="lead">
+            From a Figma frame to a deployed feature: layout, front-end code, and the data and access rules behind it.
+            My IT and embedded background means I speak the engineers' language.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="first-fruits.html">Read the First Fruits case study</a>
+            <a class="btn btn-ghost" href="https://github.com/y23angel" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <ul class="hero-meta">
+            <li>Langara College</li>
+            <li>HACKVAN2026 — shipped and deployed</li>
+            <li>Vancouver, BC</li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Work -->
+      <section id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2>Projects</h2>
+            <p class="lead">Design, front-end, full-stack and embedded work, with links to the code.</p>
+          </div>
+
+          <!-- Featured: First Fruits -->
+          <article class="card featured reveal" aria-labelledby="ff-title">
+            <div class="featured-body">
+              <p class="eyebrow">Featured · HACKVAN2026 · 48 hours</p>
+              <h3 id="ff-title">First Fruits</h3>
+              <p>
+                A web app that helps church planters track progress against their own vision, and helps their coach
+                (the Catalyst) see where support is needed. Built in a 4-person team for SEND Network.
+              </p>
+              <p><strong>My role:</strong> owner of the Catalyst journey, design to deployment.</p>
+              <ul class="check-list">
+                <li>"Where am I needed?" home that ranks churches by support requests and due check-ins</li>
+                <li>Church review page with check-in acknowledgement and goal conversations</li>
+                <li>Privacy by assignment: a Catalyst only sees churches assigned to them</li>
+                <li>Coordinated the team's merge order; both of my PRs merged and deployed</li>
+              </ul>
+              <ul class="tag-row" aria-label="Technologies">
+                <li class="tag">Next.js</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">Supabase</li>
+                <li class="tag">Vitest</li>
+                <li class="tag">Figma</li>
+              </ul>
+              <div class="link-row">
+                <a href="first-fruits.html">Case study →</a>
+                <a href="https://github.com/FaithTechGlobalLabs/PlanterFlow-Team-1" target="_blank" rel="noopener">Repository ↗</a>
+              </div>
+            </div>
+            <div class="featured-visual">
+              <figure class="mock" aria-label="Recreation of the Catalyst garden screen">
+                <div class="mock-top"><span class="mock-dot" aria-hidden="true"></span><strong>first fruits</strong></div>
+                <div class="mock-eyebrow">Your garden · Demo community</div>
+                <div class="mock-title">Good afternoon, Alex</div>
+                <div class="mock-sub">3 churches · 1 support request · 1 conversation due</div>
+                <div class="mock-panel">
+                  <h4>Where your presence helps</h4>
+                  <div class="mock-row"><b>Hope Community Church</b><span class="mock-badge support">Support requested</span></div>
+                  <div class="mock-row"><b>River Church</b><span class="mock-badge review">Review check-in</span></div>
+                  <div class="mock-row"><b>City Light Church</b><span class="mock-badge due">Check-in due</span></div>
+                </div>
+                <figcaption class="mock-caption">Recreated in HTML/CSS from the shipped screen</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <!-- Other projects -->
+          <div class="grid">
+            <article class="card project reveal">
+              <h3>Bookify</h3>
+              <p class="kind">Full-stack web application</p>
+              <p>
+                Online bookstore with Admin, Member and Guest roles. I built React components and book CRUD, connected
+                the front end to REST APIs, and persisted data in MongoDB. Book data comes from the Google Books API.
+              </p>
+              <ul class="tag-row" aria-label="Technologies">
+                <li class="tag">React</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">REST APIs</li>
+                <li class="tag">MongoDB</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://github.com/y23angel/Bookify" target="_blank" rel="noopener">Repository ↗</a>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <h3>ESP-EYE Embedded ML</h3>
+              <p class="kind">Embedded machine learning</p>
+              <p>
+                On-device object and audio recognition on the ESP-EYE (ESP32) with Edge Impulse. I configured firmware,
+                flashed boards, and read UART serial output to debug the data-capture workflow.
+              </p>
+              <ul class="tag-row" aria-label="Technologies">
+                <li class="tag">Edge Impulse</li>
+                <li class="tag">ESP-IDF</li>
+                <li class="tag">C</li>
+                <li class="tag">UART</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://github.com/y23angel/esp-eye-edge-impulse-ml" target="_blank" rel="noopener">Project ↗</a>
+                <a href="https://github.com/y23angel/esp-eye-firmware" target="_blank" rel="noopener">Firmware ↗</a>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <h3>System Security Labs</h3>
+              <p class="kind">Hands-on security practice</p>
+              <p>
+                Labs on bind and reverse TCP shells, SetUID and privilege-escalation mitigation, Shellshock, and network
+                and vulnerability scanning.
+              </p>
+              <ul class="tag-row" aria-label="Technologies">
+                <li class="tag">nmap</li>
+                <li class="tag">Nessus</li>
+                <li class="tag">Metasploit</li>
+                <li class="tag">Docker</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://github.com/y23angel/System-security-labs" target="_blank" rel="noopener">Repository ↗</a>
+              </div>
+            </article>
+
+            <article class="card project reveal">
+              <h3>Algorithms &amp; Data Structures</h3>
+              <p class="kind">C++</p>
+              <p>
+                Sorting, recursion, linked lists, stacks and queues, trees and BSTs, hashing and graph traversal, with
+                complexity analysis.
+              </p>
+              <ul class="tag-row" aria-label="Technologies">
+                <li class="tag">C++</li>
+                <li class="tag">OOP</li>
+              </ul>
+              <div class="link-row">
+                <a href="https://github.com/y23angel/Algorithms-and-Data-Structures-with-C-" target="_blank" rel="noopener">Repository ↗</a>
+              </div>
+            </article>
+          </div>
+
+          <h3 style="margin-top: 3rem">More on GitHub</h3>
+          <ul class="repo-list">
+            <li><a href="https://github.com/y23angel/web-development-fundamentals" target="_blank" rel="noopener">Web development fundamentals <small>HTML</small></a></li>
+            <li><a href="https://github.com/y23angel/full-stack-web-development" target="_blank" rel="noopener">Full-stack web development <small>Course work</small></a></li>
+            <li><a href="https://github.com/y23angel/object-oriented-programming-java" target="_blank" rel="noopener">Object-oriented programming <small>Java</small></a></li>
+            <li><a href="https://github.com/y23angel/networking-basics-lab" target="_blank" rel="noopener">Networking basics lab <small>Lab</small></a></li>
+            <li><a href="https://github.com/y23angel/cloud-and-parallel-computing" target="_blank" rel="noopener">Cloud and parallel computing <small>Course work</small></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- About -->
+      <section id="about">
+        <div class="wrap two-col">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>A designer engineers like to work with</h2>
+            <p>
+              I care about interfaces that are calm, clear and honest about what they show. On First Fruits that meant
+              labelling a quiet church "may be time to reach out — not a health score", and never showing "everyone is
+              up to date" when the data simply failed to load.
+            </p>
+            <p>
+              Before design, I worked with networks, security and embedded boards. That background lets me read an API
+              contract, follow a database access rule, and turn feedback from a code review into a fix the same day.
+            </p>
+          </div>
+          <!-- TODO(Olivia): confirm these facts before publishing -->
+          <ul class="fact-list" aria-label="Quick facts">
+            <li><span>School</span><span>Langara College</span></li>
+            <li><span>GPA</span><span>4.03</span></li>
+            <li><span>Focus</span><span>Web design · Front-end</span></li>
+            <li><span>Background</span><span>IT · Security · Embedded</span></li>
+            <li><span>Languages</span><span>English · Korean</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Skills</p>
+            <h2>What I work with</h2>
+          </div>
+          <div class="skills">
+            <div class="card skill-group reveal">
+              <h3>Design</h3>
+              <ul>
+                <li>Figma to code</li>
+                <li>Responsive layout</li>
+                <li>Accessibility (labels, focus, contrast)</li>
+                <li>Empty, loading and error states</li>
+              </ul>
+            </div>
+            <div class="card skill-group reveal">
+              <h3>Front-end</h3>
+              <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>TypeScript, React, Next.js</li>
+                <li>Tailwind CSS</li>
+                <li>Testing with Vitest</li>
+              </ul>
+            </div>
+            <div class="card skill-group reveal">
+              <h3>Back-end &amp; data</h3>
+              <ul>
+                <li>Supabase, PostgreSQL, row-level security</li>
+                <li>MongoDB</li>
+                <li>REST APIs</li>
+                <li>SQL migrations</li>
+              </ul>
+            </div>
+            <div class="card skill-group reveal">
+              <h3>Systems</h3>
+              <ul>
+                <li>C, C++, Java</li>
+                <li>ESP32 / ESP-IDF, Edge Impulse</li>
+                <li>nmap, Nessus, Metasploit</li>
+                <li>Git and GitHub pull requests</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something clear.</h2>
+          <p class="lead">I'm looking for web design and front-end roles. You can find all my code on GitHub.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/y23angel" target="_blank" rel="noopener">GitHub ↗</a>
+            <!-- TODO(Olivia): add an "Email me" (mailto:) and a LinkedIn button here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© <span data-year>2026</span> Olivia (Kyounga) Yun</span>
+        <span>Hand-coded in HTML, CSS and JavaScript</span>
+      </div>
+    </footer>
+  </body>
+</html>
